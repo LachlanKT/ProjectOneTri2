@@ -32,8 +32,8 @@ public class Main : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space)) 
         
-        { 
-        
+        {
+            EnemyBattle();
         }
     }
 
@@ -48,5 +48,10 @@ public class Main : MonoBehaviour
             enemyHealth = (int)enemyHealth; // round down
         }
         Debug.Log("EnemyHealth equals: " + enemyHealth);
+    }
+    public void EnemyBattle() 
+    {
+        enemyHealth = enemyHealth - playerStrength;
+        Debug.Log("Enemy health equals: " + enemyHealth);
     }
 }
